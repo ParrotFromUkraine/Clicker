@@ -9,7 +9,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-const users = [];
 
 // --get
 app.get('/', (req, res) => {
@@ -47,3 +46,7 @@ app.post('/sign-in', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Сервер працює на http://localhost:${PORT}`);
 });
+
+// -- CRUD for upgrade 
+
+
