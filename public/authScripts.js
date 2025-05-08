@@ -1,3 +1,9 @@
+const button = document.getElementById('signUpButton')
+const enableEye = document.getElementById('showPassword')
+const disableEye = document.getElementById('password')
+const password = document.getElementById(elementId)
+const loginInfo = { email: '', password: '' }
+
 const userList = [
   {
     userId: 1,
@@ -40,25 +46,35 @@ const userList = [
   }
 ];
 
-// Обробка форми
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Запобігає перезавантаженню сторінки
-
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-
-  // Перевірка користувача
-  const user = userList.find(u => u.username === username && u.password === password);
-
-  const messageElement = document.getElementById('message');
-  if (user) {
-    messageElement.textContent = `Ласкаво просимо, ${user.username}!`;
-    messageElement.style.color = 'green';
-
-    // Перенаправлення на clicker.html
-    window.location.href = './clicker/clicker.html';
+// Робота з глазикомо
+enableEye.addEventListener('click', function () {
+  if (disableEye.type === 'password') {
+    enableEye.src = './img/Show.png'
+    disableEye.type = 'text'
   } else {
-    messageElement.textContent = 'Невірні ім\'я користувача або пароль!';
-    messageElement.style.color = 'red';
+    enableEye.src = './img/Hide.png'
+    disableEye.type = 'password'
   }
-});
+})
+
+emailInput.addEventListener('input', function () {
+  info.email = this.value
+  console.log(`${info} - обект`)
+  console.log(`${username} - логин`)
+})
+
+passwordInput.addEventListener('input', function () {
+  info.password = this.value
+  console.log(`${info} - обект `)
+  console.log(`${password} - пароль`)
+})
+
+
+button.addEventListener('click', function () {
+  event.preventDefault()
+  console.log(emailInput.value)
+  console.log(passwordInput.value)
+})
+
+// Проверка користувача
+// --exit нада доделать 

@@ -1,105 +1,108 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
+@font-face {
+  font-family: 'Work-Sans';
+  src: url('./fonts/WorkSans-VariableFont_wght.ttf');
 }
 
-.Sign-Up {
-    font-weight: normal;
-    margin: -4px;
-}
-
-.container {
-    text-align: center;
-    background: #fff;
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-}
-
-h1 {
-    font-size: 28.8px;
-    margin-bottom: 16px;
+* {
+  font-family: Work-Sans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  max-width: 400px;
 }
 
-label {
-    text-align: left;
-    margin-bottom: 8px;
-    font-size: 14.4px;
-    color: #555;
+body {
+  background: #af6a99b6;
 }
 
-.password-container {
-    position: relative;
+main {
+  padding: 80px 0 0;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  margin: 0 auto 12px;
+}
+
+.welcome-message {
+  text-align: center;
+  color: #121212;
+  font-size: 40px;
+  margin: 0 0 48px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #121212;
+  font-size: 24px;
+  margin: 0 0 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 18px;
 }
 
 input {
-    padding: 12.8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 375px;
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.toggle-password svg {
-    width: 24px;
-    height: 24px;
-    fill: #afb1b6;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #afb1b6;
+  padding: 15px 5px;
+  width: 100%;
 }
 
 button {
-    background-color: #121212;
-    color: white;
-    padding: 12.8px;
-    font-size: 16px;
-    border: none;
-    border-radius: 16px;
-    cursor: pointer;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  border: #000000 1px solid;
+  border-radius: 12px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition-duration: 200ms;
 }
 
-.signin-link {
-    margin-top: 16px;
-    font-size: 14.4px;
+button:active {
+  padding: 12px 0;
+  color: #3a2d12;
+  border: #8f7652 1px solid;
+  cursor: pointer;
 }
 
-.signin-link a {
-    color: black;
-    text-decoration: none;
+.account {
+  font-size: 16px;
+  color: #121212;
+  margin: 0 auto;
 }
 
-.signin-link a:hover {
-    text-decoration: underline;
+.account a {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
 }
 
-svg {
-    position: absolute;
-    top: -6px;
-    left: -12px;
+label {
+  font-size: 16;
+  color: #61466b;
+  display: block;
+  margin: 8px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon img {
+  position: absolute;
+  top: 42px;
+  right: 12px;
+  cursor: pointer;
+  height: 40%;
 }
